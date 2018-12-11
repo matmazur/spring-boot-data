@@ -36,7 +36,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "com.matmazur.model.Person{" +
+        return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
