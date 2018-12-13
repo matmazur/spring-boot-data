@@ -22,7 +22,7 @@ public interface PersonRepository extends PagingAndSortingRepository<Person, Lon
 
     public List<Person> findByNameContainingOrderByAgeAsc(String pattern);
 
-    @Query("select p from Person p where p.name = :name AND p.age = :age")
+    @Query(name = "Person.findAllByNameAndAge")
     public List<Person> whatever(@Param("name") String name,
                                  @Param("age") Integer age);
 }

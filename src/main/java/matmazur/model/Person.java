@@ -3,6 +3,9 @@ package matmazur.model;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries(
+        @NamedQuery(name = "Person.findAllByNameAndAge", query = "select p from Person p where p.name = :name AND p.age = :age")
+)
 public class Person {
 
     @Id
