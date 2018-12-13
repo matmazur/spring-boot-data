@@ -38,6 +38,16 @@ public class SpringBootDataApplication {
         Page<Person> people = repo.findAll(PageRequest.of(0, 2, Sort.Direction.ASC, "name"));
         people.getContent().forEach(System.out::println);
 
+        System.out.println("Find by name\n>>>>");
+        System.out.println(repo.getFirstByName("Jack"));
+        System.out.println("Find by surname\n>>>>");
+        System.out.println(repo.getBySurname("Ashley"));
+        System.out.println("Find by age\n>>>>");
+        System.out.println(repo.findByAge(44));
 
+
+        System.out.println(repo.findAllByAgeOrName(44,"Amy"));
+
+        System.out.println(repo.findByNameContainingOrderByAgeAsc("ac"));
     }
 }
