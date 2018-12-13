@@ -46,8 +46,12 @@ public class SpringBootDataApplication {
         System.out.println(repo.findByAge(44));
 
 
-        System.out.println(repo.findAllByAgeOrName(44,"Amy"));
+        System.out.println(repo.findAllByAgeOrName(44, "Amy"));
 
         System.out.println(repo.findByNameContainingOrderByAgeAsc("ac"));
+
+
+        System.out.println(">>>>>>>>>");
+        System.out.println(repo.whatever("Amy", 22));
     }
 }
